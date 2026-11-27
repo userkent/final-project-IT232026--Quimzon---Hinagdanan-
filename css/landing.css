@@ -1,0 +1,11 @@
+/* Landing page extras (built from the app's own colors and sizes) */
+.wrap{max-width:1080px;margin:auto;padding:0 1rem}
+.sec{padding:3rem 0;border-top:1px solid var(--line)}
+.sec h2{margin-top:0}
+.sec > p{color:var(--mute);max-width:36em}
+.hero .win .ed{display:block;border:0;border-radius:0;min-height:8.5em;resize:none}
+.try{padding:.7rem .8rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line)}
+.try small{color:var(--mute)}
+.win .out{margin:0;border-radius:0;border-top:1px solid var(--line)}
+.final{text-align:center;padding:4rem 0}
+.final h2{margin:0 auto 1rem;max-width:16em}
