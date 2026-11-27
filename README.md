@@ -1,5 +1,5 @@
 # [App Name]
-<!-- About your app: what does your app do? Example: "Today's carinderia menu and orders, without paper." -->
+CDKNOW
 
 ## Problem
 <!-- 1–2 sentences in bulleted form. Keep it direct. What everyday problem does your app solve? Who has this problem, and where?
