@@ -1,156 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>KNW-CODE – Learn code with clarity</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CDKNOW – Learn, practice and test your code</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="logo" href="#home"><span class="logo-mark">&lt;/&gt;</span>KNW-CODE</a>
-  <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
-  <nav class="nav" id="nav">
-    <a href="#home" class="active">Home</a>
-    <a href="#features">Features</a>
-    <a href="#paths">Learning Paths</a>
-    <a href="#languages">Languages</a>
-  </nav>
-  <div class="header-actions">
-    <select class="select" aria-label="Language"><option>English</option><option>Filipino</option><option>Español</option></select>
-    <span class="user-name" id="userName" hidden></span>
-    <button class="btn btn-outline btn-sm" data-auth>Login</button>
-    <a href="#paths" class="btn btn-solid btn-sm">Start Learning</a>
-  </div>
-</header>
 
-<main>
-  <section class="hero container" id="home">
-    <div class="hero-text">
-      <span class="pill">CODE • LEARN • GROW</span>
-      <h1>Learn code with clarity.<br><em>Practice with purpose.</em></h1>
-      <p>KNW-CODE is your all-in-one platform to learn, practice, and master programming. Build real skills, track your progress, and become the developer you want to be.</p>
-      <div class="btn-row">
-        <a href="#paths" class="btn btn-solid">▶ Start Learning</a>
-        <button class="btn btn-outline" data-quiz>☰ Try a Quiz</button>
-      </div>
-      <ul class="mini-features">
-        <li><b>Learn</b><span>Explore concepts with clear explanations.</span></li>
-        <li><b>Practice</b><span>Solve real coding challenges.</span></li>
-        <li><b>Quiz</b><span>Test your knowledge and improve.</span></li>
-      </ul>
+  <header>
+    <div class="bar">
+      <a class="brand" href="#home">CD<b>KNOW</b></a>
+      <nav id="nav" aria-label="Main">
+        <a href="#home">Home</a>
+        <a href="#library">Library</a>
+        <a href="#practice">Coding Area</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#profile">Profile</a>
+        <a href="#settings">Settings</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="editor" aria-label="Code editor preview">
-      <div class="editor-bar">
-        <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
-        <span class="tab">JavaScript</span>
-        <button class="run-btn" id="runBtn">Run ▶</button>
-      </div>
-<pre class="code"><code><span class="k">function</span> <span class="f">greet</span>(name) {
-  <span class="k">return</span> <span class="s">`Hello, ${name}!`</span>;
-}
+  <!-- Every page is rendered here by js/views.js -->
+  <main id="app" tabindex="-1"></main>
 
-console.<span class="f">log</span>(<span class="f">greet</span>(<span class="s">"Developer"</span>));</code></pre>
-      <div class="output"><small>OUTPUT</small><code id="output">Hello, Developer!</code></div>
-    </div>
-  </section>
+  <footer>CDKNOW · IT23C Web Systems project · Your progress is saved only in this browser.</footer>
 
-  <section class="stats container">
-    <div><strong data-count="10000" data-suffix="+">10K+</strong><span>Active Learners</span></div>
-    <div><strong data-count="50" data-suffix="+">50+</strong><span>Learning Paths</span></div>
-    <div><strong data-count="1000" data-suffix="+">1000+</strong><span>Coding Exercises</span></div>
-    <div><strong data-count="200" data-suffix="+">200+</strong><span>Quiz Questions</span></div>
-  </section>
-
-  <section class="features container" id="features">
-    <div class="features-intro">
-      <span class="eyebrow">Why choose KNW-CODE?</span>
-      <h2>Everything you need to become a better developer.</h2>
-      <p>From beginner to advanced, KNW-CODE gives you the tools, resources, and practice you need to build real coding skills and confidence.</p>
-      <a href="#" class="btn btn-outline">Explore Features →</a>
-    </div>
-    <div class="feature-grid">
-      <button class="card" data-feature="editor"><span class="icon">⌨</span><h3>Interactive Code Editor</h3><p>Write, run, and test your code right in your browser.</p></button>
-      <button class="card" data-feature="progress"><span class="icon">📈</span><h3>Progress Tracking</h3><p>See your growth and stay motivated.</p></button>
-      <button class="card" data-feature="languages"><span class="icon">&lt;/&gt;</span><h3>Multiple Languages</h3><p>Learn popular programming languages in one place.</p></button>
-      <button class="card" data-feature="explain"><span class="icon">💡</span><h3>Detailed Explanations</h3><p>Understand concepts with simple, clear explanations.</p></button>
-    </div>
-  </section>
-
-  <section class="paths container" id="paths">
-    <div class="section-head">
-      <div><span class="eyebrow">Learning Paths</span><h2>Choose Your Path</h2>
-      <p>Follow structured learning paths and achieve your goals step by step.</p></div>
-      <a href="#" class="btn btn-outline btn-sm">View All Paths →</a>
-    </div>
-    <div class="path-grid">
-      <a href="#" class="path p-green"><span class="icon">🌱</span><h3>Beginner</h3><p>Start from the basics and build a strong foundation.</p><i class="go">→</i></a>
-      <a href="#" class="path p-blue"><span class="icon">📊</span><h3>Intermediate</h3><p>Go deeper with advanced concepts and real projects.</p><i class="go">→</i></a>
-      <a href="#" class="path p-purple"><span class="icon">⭐</span><h3>Advanced</h3><p>Master complex topics and build professional skills.</p><i class="go">→</i></a>
-      <a href="#" class="path p-orange"><span class="icon">💼</span><h3>Project-Based</h3><p>Apply your skills with real-world projects.</p><i class="go">→</i></a>
-    </div>
-  </section>
-
-  <section class="languages container" id="languages">
-    <div class="section-head">
-      <div><span class="eyebrow">Supported Languages</span><h2>Learn in Your Favorite Language</h2></div>
-      <a href="#" class="btn btn-outline btn-sm">View All Languages →</a>
-    </div>
-    <div class="lang-grid">
-      <a href="#" class="lang"><b style="color:#f89820">Ja</b>Java</a>
-      <a href="#" class="lang"><b style="color:#f7df1e">JS</b>JavaScript</a>
-      <a href="#" class="lang"><b style="color:#4b8bbe">Py</b>Python</a>
-      <a href="#" class="lang"><b style="color:#5c9de6">C++</b>C++</a>
-      <a href="#" class="lang"><b style="color:#5c9de6">C</b>C</a>
-      <a href="#" class="lang"><b style="color:#b07be8">C#</b>C#</a>
-      <a href="#" class="lang"><b style="color:#8892bf">php</b>PHP</a>
-      <a href="#" class="lang"><b style="color:#3fa9f5">DB</b>SQL</a>
-      <a href="#" class="lang"><b style="color:#e44d26">5</b>HTML</a>
-      <a href="#" class="lang"><b style="color:#2d8be5">3</b>CSS</a>
-    </div>
-  </section>
-
-  <section class="cta container">
-    <span class="cta-icon">&lt;/&gt;</span>
-    <div>
-      <h2>Ready to start your journey?</h2>
-      <p>Join thousands of learners and build the skills for your future.</p>
-      <div class="btn-row"><a href="#" class="btn btn-solid btn-sm">Get Started Now →</a><button class="btn btn-outline btn-sm" data-auth>Login</button></div>
-    </div>
-    <p class="tagline">Better Code.<br>Brighter Future.</p>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div><a class="logo" href="#home"><span class="logo-mark">&lt;/&gt;</span>KNW-CODE</a><small>Learn • Practice • Grow</small></div>
-  <nav class="footer-nav"><a href="#home">Home</a><a href="#features">Features</a><a href="#paths">Learning Paths</a><a href="#languages">Languages</a><a href="#" data-auth>Login</a></nav>
-  <div class="footer-right"><a href="#" aria-label="GitHub">GitHub</a><a href="#" aria-label="YouTube">YouTube</a><a href="#" aria-label="X">X</a></div>
-</footer>
-
-<dialog id="loginDialog" class="modal login">
-  <button class="close-x" type="button" data-close aria-label="Close">✕</button>
-  <form id="loginForm">
-    <span class="logo-mark login-logo">&lt;/&gt;</span>
-    <h2>Welcome back</h2>
-    <p class="sub">Login to continue your coding journey.</p>
-    <label>Name<div class="field"><span>👤</span><input id="nameInput" required autocomplete="name" placeholder="Your name"></div></label>
-    <label>Email<div class="field"><span>✉</span><input type="email" required autocomplete="email" placeholder="you@example.com"></div></label>
-    <label>Password<div class="field"><span>🔒</span><input id="pwInput" type="password" required minlength="4" autocomplete="current-password" placeholder="At least 4 characters"><button type="button" class="pw-toggle" id="pwToggle" aria-label="Show password">Show</button></div></label>
-    <button class="btn btn-solid btn-block" type="submit">Login</button>
-    <p class="hint">Demo only. Nothing is sent anywhere.</p>
-  </form>
-</dialog>
-
-<dialog id="infoDialog" class="modal">
-  <h2 id="infoTitle"></h2>
-  <p id="infoText"></p>
-  <div id="infoExtra"></div>
-  <div class="btn-row"><button class="btn btn-outline" data-close>Close</button></div>
-</dialog>
-
-<div class="toast" id="toast" role="status"></div>
-
-<script src="script.js"></script>
+  <!-- Scripts (order matters) -->
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/coding.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
